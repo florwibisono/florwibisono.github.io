@@ -1,0 +1,42 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    opacity: 0.9; /* Transparent look to simulate layers */
+    transition: transform 0.5s ease-in-out;
+}
+
+#page1 {
+    top: 0;
+    z-index: 1;
+    background-color: lightblue;
+}
+
+#page2 {
+    top: 30px; /* Slightly below page 1 */
+    z-index: 0;
+    background-color: lightgreen;
+}
+
+#page3 {
+    top: 60px; /* Slightly below page 2 */
+    z-index: -1;
+    background-color: lightcoral;
+}
