@@ -8,11 +8,24 @@
 </head>
 <body>
     <div class="container">
-        <div class="page" onclick="flipPage(this)">Page 1</div>
-        <div class="page" onclick="flipPage(this)">Page 2</div>
-        <div class="page" onclick="flipPage(this)">Page 3</div>
+        <div class="page" onclick="flipPages(this)">Page 1</div>
+        <div class="page" onclick="flipPages(this)">Page 2</div>
+        <div class="page" onclick="flipPages(this)">Page 3</div>
     </div>
     
-
+    <script>
+        function flipPages(selectedPage) {
+            let pages = Array.from(document.querySelectorAll('.page'));
+            let index = pages.indexOf(selectedPage);
+            
+            pages.forEach((page, i) => {
+                if (i <= index) {
+                    page.classList.add('flipped');
+                } else {
+                    page.classList.remove('flipped');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
