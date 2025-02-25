@@ -37,17 +37,17 @@ body {
 
 .page:nth-child(2) { 
     background: lightseagreen; 
-    transform: translateY(20px) scale(0.95); 
+    transform: translateY(100px) scale(0.95); 
     z-index: 2; 
 }
 
 .page:nth-child(3) { 
     background: lightskyblue; 
-    transform: translateY(40px) scale(0.9); 
+    transform: translateY(150px) scale(0.9); 
     z-index: 1; 
 }
 
 .flipped {
-    transform: rotateY(180deg) translateY(0) scale(1) !important;
+    transform: rotateX(180deg) translateY(100%) scale(1) !important;
     z-index: 4 !important;
 }
