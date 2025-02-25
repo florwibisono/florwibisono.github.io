@@ -14,11 +14,11 @@
     </div>
     
     <script>
-        function flipPage(selectedPage) {
+        function flipPage(previousPage) {
             document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('flipped');
+                page.classList.add('flipped');
             });
-            selectedPage.classList.add('flipped');
+            selectedPage.classList.remove('flipped');
         }
     </script>
 </body>
