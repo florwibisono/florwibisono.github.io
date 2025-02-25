@@ -37,13 +37,13 @@ body {
 
 .page:nth-child(2) { 
     background: lightseagreen; 
-    transform: translateY(100px) scale(0.95); 
+    transform: translateY(0px) scale(0.9); 
     z-index: 2; 
 }
 
 .page:nth-child(3) { 
     background: lightskyblue; 
-    transform: translateY(150px) scale(0.9); 
+    transform: translateY(0px) scale(0.8); 
     z-index: 1; 
 }
 

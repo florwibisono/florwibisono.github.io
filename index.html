@@ -14,11 +14,17 @@
     </div>
     
     <script>
-        function flipPage(previousPage) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.add('flipped');
+        function flipPages(selectedPage) {
+            let pages = Array.from(document.querySelectorAll('.page'));
+            let index = pages.indexOf(selectedPage);
+            
+            pages.forEach((page, i) => {
+                if (i <= index) {
+                    page.classList.add('flipped');
+                } else {
+                    page.classList.remove('flipped');
+                }
             });
-            selectedPage.classList.remove('flipped');
         }
     </script>
 </body>
