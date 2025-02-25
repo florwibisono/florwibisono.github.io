@@ -1,13 +1,12 @@
-let currentPage = 1;
-const pages = document.querySelectorAll('.page');
+function flipPages(selectedPage) {
+    let pages = Array.from(document.querySelectorAll('.page')).reverse(); // Reverse to flip top pages first
+    let index = pages.indexOf(selectedPage);
 
-function showPage(pageNumber) {
-    // Reset all pages to be invisible
-    pages.forEach(page => page.style.transform = 'translateY(100vh)');
-    
-    // Show the selected page
-    pages[pageNumber - 1].style.transform = 'translateY(0)';
+    pages.forEach((page, i) => {
+        if (i <= index) {
+            page.classList.add('flipped');
+        } else {
+            page.classList.remove('flipped');
+        }
+    });
 }
-
-// You can also call showPage(1) to load the first page by default if desired.
-//showPage(1);

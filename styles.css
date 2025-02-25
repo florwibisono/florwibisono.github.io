@@ -28,6 +28,7 @@ body {
     font-family: Arial, sans-serif;
     cursor: pointer;
     transition: transform 0.8s ease, z-index 0.3s;
+    transform-origin: left center; /* Ensures a book-like flipping effect */
 }
 
 .page:nth-child(1) { 
@@ -37,13 +38,13 @@ body {
 
 .page:nth-child(2) { 
     background: lightseagreen; 
-    transform: translateY(0px) scale(0.9); 
+    transform: translateY(100px) scale(0.9); 
     z-index: 2; 
 }
 
 .page:nth-child(3) { 
     background: lightskyblue; 
-    transform: translateY(0px) scale(0.8); 
+    transform: translateY(150px) scale(0.8); 
     z-index: 1; 
 }
 
