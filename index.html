@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stacked Pages</title>
+    <title>Flipping Pages Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="page" id="page1">
-        <h1>Page 1</h1>
-        <p>This is the first page.</p>
+    <div class="container">
+        <div class="page" onclick="flipPage(this)">Page 1</div>
+        <div class="page" onclick="flipPage(this)">Page 2</div>
+        <div class="page" onclick="flipPage(this)">Page 3</div>
     </div>
-    <div class="page" id="page2">
-        <h1>Page 2</h1>
-        <p>This is the second page.</p>
-    </div>
-    <div class="page" id="page3">
-        <h1>Page 3</h1>
-        <p>This is the third page.</p>
-    </div>
-
-    <script src="script.js"></script>
+    
+    <script>
+        function flipPage(selectedPage) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('flipped');
+            });
+            selectedPage.classList.add('flipped');
+        }
+    </script>
 </body>
 </html>

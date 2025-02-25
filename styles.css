@@ -1,42 +1,53 @@
-/* General reset */
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    overflow: hidden;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    overflow: hidden; /* Prevents scrolling */
+.container {
+    position: relative;
+    width: 60vw;
+    height: 80vh;
+    perspective: 1000px;
 }
 
 .page {
     position: absolute;
     width: 100%;
     height: 100%;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: white;
     border-radius: 10px;
-    opacity: 0.9; /* Transparent look to simulate layers */
-    transition: transform 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: transform 0.8s ease, z-index 0.3s;
 }
 
-#page1 {
-    top: 0;
-    z-index: 1;
-    background-color: lightblue;
+.page:nth-child(1) { 
+    background: lightcoral; 
+    z-index: 3; 
 }
 
-#page2 {
-    top: 30px; /* Slightly below page 1 */
-    z-index: 0;
-    background-color: lightgreen;
+.page:nth-child(2) { 
+    background: lightseagreen; 
+    transform: translateY(20px) scale(0.95); 
+    z-index: 2; 
 }
 
-#page3 {
-    top: 60px; /* Slightly below page 2 */
-    z-index: -1;
-    background-color: lightcoral;
+.page:nth-child(3) { 
+    background: lightskyblue; 
+    transform: translateY(40px) scale(0.9); 
+    z-index: 1; 
+}
+
+.flipped {
+    transform: rotateY(180deg) translateY(0) scale(1) !important;
+    z-index: 4 !important;
 }
